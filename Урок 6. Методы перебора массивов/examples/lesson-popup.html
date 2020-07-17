@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Popup</title>
+	<style>
+		#button{
+			display: block;
+			width: 100px;
+			height: 40px;
+			border: 1px solid #000;
+			background: yellow;
+			cursor: pointer;
+		}
+		#popup{
+			display: none;
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+			position: absolute;
+			top: 200px;
+			left: calc(50% - 150px);
+			background: #fff;
+		}
+		#close{
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<a id="button">Show Popup</a>
+	<div id="popup">
+		<p>Some text goes here</p>
+		<span id="close">x</span>
+	</div>
+
+	<script>
+		// get our button
+		var btn = document.getElementById('button');
+
+		// add event on click in order to show popup and blur body background
+		btn.addEventListener('click', function(){
+			popup.style.display = "block";
+			body.style.background = "rgba(0,0,0,0.4)";
+		});
+		// get our body
+		var body = document.body;
+
+		// get out popup
+		var popup = document.getElementById('popup');
+
+		// get our close button
+		var close = document.getElementById('close');
+		
+		// add event on click in order to close popup and fade blur of body background
+		close.addEventListener('click', function(){
+			popup.style.display = "none";
+			body.style.background = "rgba(0,0,0,0.0)";
+		});
+	</script>
+	
+</body>
+</html>

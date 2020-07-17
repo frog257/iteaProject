@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>practise_lesson_5</title>
+</head>
+<body>
+    <!-- 
+        1. Обрезать строку (первый аргумент), если она длиннее заданной максимальной длины строки (второй аргумент). Вернуть усеченную строку с ... окончанием.
+
+        function truncateString(str, num) {
+        // Clear out that junk in your trunk
+        return str;
+        }
+
+        truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+        2. Создайте функцию, которая просматривает массив (первый аргумент) и возвращает первый элемент в массиве, который проходит проверку на истинность (второй аргумент). Если ни один элемент не проходит тест, вернуть undefined.
+
+        function findElement(arr, func) {
+            var test = 0;
+            if(func(test)){
+                return test;
+            }
+            return num;
+        }
+
+        findElement([1, 2, 3, 4], function(num) {return num % 2 === 0} );
+
+        3. Проверьте, классифицировано ли значение как логический примитив. Верните true или false.
+
+        Булевы примитивы истинны и ложны.
+
+        function booWho(bool) {
+        return bool;
+        }
+
+        booWho(null);     
+        
+        4. Напишите код, выполнив задание из каждого пункта отдельной строкой:
+            Создайте пустой объект user.
+            Добавьте свойство name со значением John.
+            Добавьте свойство surname со значением Smith.
+            Измените значение свойства name на Pete.
+            Удалите свойство name из объекта.
+
+        5. Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+     -->
+
+     <script>
+        // 1. Обрезать строку (первый аргумент), если она длиннее заданной максимальной длины строки (второй аргумент). Вернуть усеченную строку с ... окончанием.
+
+        function truncateString(str, num) {
+        // Clear out that junk in your trunk
+            if (str.length > num) {
+                var arr = str.split('');
+                var truncatedArr = arr.splice(0, num)
+                str = truncatedArr.join('');
+
+                return str + '...';
+            }
+
+            return str;
+        }
+
+        console.log(truncateString("A-tisket a-tasket A green and yellow basket", 200));
+     </script>
+</body>
+</html>

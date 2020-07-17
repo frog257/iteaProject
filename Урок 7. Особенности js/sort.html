@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array=[25, 8, 7, 41]
+
+        array.sort(function(a,b){
+            return a - b
+        })
+
+        array.sort((a, b) => a - b);
+
+        for (var i = 0; i < array.length - 1; i++) {
+            if (a > b) { 
+                return 1; } 
+            if (a < b) { 
+                return -1; } 
+            return 0; 
+        }
+
+mapped.sort(function(a, b) { 
+
+});
+
+        // sort
+        // Пары значений сравниваются по одной паре за раз. Сравниваемые пары являются деталями реализации - не думайте, что они будут одинаковыми в каждом браузере.
+        // Меньше 0: «a» сортируется как более низкий индекс, чем «b». 
+        // Ноль: «a» и «b» считаются равными, и сортировка не производится. 
+        // Больше 0: «b» сортируется как более низкий индекс, чем «a». 
+
+        array.sort((a,b) => {
+        console.log(`comparing ${a},${b}`);
+        return a > b ? 1
+                    : a === b ? 0 
+                                : -1;
+        });
+
+        // При работе с JavaScript сортировкой нужно помнить, что он не гарантированно стабилен. Ваш конкретный интерпретатор JavaScript может использовать любой из алгоритмов сортировки. Стандарт ECMAScript не определяет, какой алгоритм должна использовать соответствующая реализация.
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!-- Эти методы используются для проверки массива.
+
+Метод «arr.every(callback[, thisArg])» возвращает true, если вызов callback вернёт true для каждого элемента arr.
+Метод «arr.some(callback[, thisArg])» возвращает true, если вызов callback вернёт true для какого-нибудь элемента arr. -->
+<script type="text/javascript">
+var arr = [1, -1, 2, -2, 3];
+
+function isPositive(number) {
+  return number > 0;
+}
+
+console.log( arr.every(isPositive) );
+console.log( arr.some(isPositive) ); 
+</script>

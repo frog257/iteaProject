@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #block{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            top left corner
+            <input type="range" id="tlc" value="0" min="0" max="100" oninput="onRangeChange()">
+            <!-- id="ttl" ttl - text top left -->
+            <span id="ttl">0</span>
+        </p>
+        <p>
+            top right corner
+            <input type="range" id="trc" value="0" min="0" max="100" oninput="onRangeChange()">
+            <span id="ttr">0</span>
+        </p>
+        <p>
+            bottom left corner
+            <input type="range" id="blc" value="0" min="0" max="100" oninput="onRangeChange()">
+            <span id="tbl">0</span>
+        </p>
+        <p>
+            bottom right corner
+            <input type="range" id="brc" value="0" min="0" max="100" oninput="onRangeChange()">
+            <span id="tbr">0</span>
+        </p>                                    
+    </div>
+
+    <input id="color" type="color">
+    <div id="block"></div>
+    <script>
+        function onRangeChange() {
+            var tlc = document.getElementById('tlc').value;            
+            var trc = document.getElementById('trc').value;            
+            var blc = document.getElementById('blc').value;            
+            var brc = document.getElementById('brc').value;
+
+            // get span values
+            var ttl = document.getElementById('ttl');
+            var ttr = document.getElementById('ttr');
+            var tbl = document.getElementById('tbl');
+            var tbr = document.getElementById('tbr');
+
+            ttl.innerHTML = tlc;
+            ttr.innerHTML = trc;
+            tbl.innerHTML = blc;
+            tbr.innerHTML = brc;
+            // (first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner):
+
+            document.getElementById('block').style.borderRadius = tlc + 'px ' + trc + 'px ' + blc + 'px ' + brc + 'px'; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carousel</title>
+	<style>
+		.wrapper{
+			width: 800px;
+			margin: 0 auto;
+		}
+		.slide{
+			width: 440px;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Carousel example</h1>
+		<div class="slides">
+			<img class="slide" src="test1.jpg" alt="1">
+			<img class="slide" src="test2.jpg" alt="2">
+			<img class="slide" src="test3.jpg" alt="3">		
+		</div>
+		<div class="navigation">
+			<button onclick="navigateSlides(-1)">Prev</button>
+			<button onclick="navigateSlides(1)">Next</button>
+		</div>
+		<div class="dots">
+			<button onclick="showCurrentSlide(1)">1</button>
+			<button onclick="showCurrentSlide(2)">2</button>
+			<button onclick="showCurrentSlide(3)">3</button>
+		</div>		
+	</div>	
+	<script>
+		// create index of the slide to show on the page, we start from 1 in order to not miss the element with index 0
+		var index = 1;
+		showSlide(index);		
+
+		// navigate slides on click on navigation buttons
+		function navigateSlides(n) {
+			showSlide(index += n);	// 0 - 1 = -1;		
+		}
+
+		// show slide due the clicked button
+		function showCurrentSlide(n) {
+			showSlide(index = n);
+		}
+
+		// function to show the slides
+		function showSlide(n) {		
+			// getting collection of the elements
+			var slides = document.getElementsByClassName('slide');
+			// checking the index of the element if it is last - assign to 1	
+			if (n > slides.length) {
+				index = 1;
+			}
+			// checking the index of the element if it is less than 1 - assign to 3
+			if (n < 1) {
+				index = slides.length;
+			}
+			// hiding all the slides
+			for (var i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			// showing the current slide with received index
+			slides[index - 1].style.display = "block";
+		}
+	</script>
+</body>
+</html>

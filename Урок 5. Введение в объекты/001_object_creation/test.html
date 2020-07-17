@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var persona = {
+            
+        };
+
+        persona.name = 'Test';
+        persona.eyeColor = 'blue';
+
+        persona.showInfo = function() {
+            console.log('Person name is ' + persona.name);
+        }
+
+        persona.showInfo();
+
+        for (var test in persona) {
+            console.log(test);
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>

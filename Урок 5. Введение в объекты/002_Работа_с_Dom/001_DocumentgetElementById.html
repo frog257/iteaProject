@@ -1,0 +1,20 @@
+﻿<!-- document.getElementById - поиск елемента на странице по id -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Свойства объекта Document</title>
+    <script>
+        function getValue()
+          {
+              var test = document.getElementById("myHeader");
+              console.log(myHeader);
+              test.style.color = '#f00';
+          }
+    </script>
+</head>
+<body>
+
+<h1 id="myHeader" onclick="getValue()">Click me!</h1>
+
+</body>
+</html>

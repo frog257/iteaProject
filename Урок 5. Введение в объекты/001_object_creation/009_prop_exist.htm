@@ -1,0 +1,43 @@
+﻿<!--
+    Конструкция if(имя_свойства in объект) используется для проверки наличия свойства у объекта.
+-->
+
+<html>
+<head>
+    <title>Проверка существования свойства</title>
+
+    <script type="text/javascript">
+
+        var car = {
+            color: "black",
+            weight: 3000,
+            engine: {
+                cylinders: 8,
+                volume: 4.2,
+                start: function () { alert("start"); }
+            }
+        }
+
+        
+
+        // ЕСЛИ: В объекте "car" есть свойство "engine"
+
+        if ("engine" in car) {
+            for (var test in car.engine) {
+                console.log(test + ": " + car.engine[test]); // ТО: Выводим информацию о двигателе
+            }
+            car.engine.start();
+        }
+        else { // ИНАЧЕ: Сообщаем пользователю, что двигателя нет
+            console.log("engine was lost");
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

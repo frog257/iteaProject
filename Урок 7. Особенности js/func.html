@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="test">Show alert</button>
+    <p style="color: #fff">some test</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta veritatis nobis iste? Aspernatur reprehenderit repudiandae eligendi doloribus. Illum ex doloribus asperiores minus deserunt doloremque corporis. Corporis tempora sit porro tenetur?</p>
+
+    <script>
+        var btn = document.getElementById('test');
+
+        
+        function test() {
+           alert('its working without return')
+        }
+
+        var p = document.querySelectorAll('p');
+
+        console.log(p)
+
+        p.addEventListener('click', function(){
+            p.style.color = 'red';
+        });
+
+        var createButton = function() {
+            var btn = document.createElement('buttton');
+            btn.style.background = 'green';
+            btn.innerText = 'newly created button';
+            document.body.appendChild(btn);
+        }
+
+        var fruitsArr = [1,2,3,4,5];
+
+        function showFruits(arr) {
+            arr.forEach(function(item) {
+                var elem = document.createElement('p')
+                elem.innerText = item
+                document.body.appendChild(elem);
+                
+            })
+        }
+
+        btn.addEventListener('click', function(){
+            return showFruits(fruitsArr);
+        });
+
+
+
+
+    </script>
+</body>
+</html>

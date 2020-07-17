@@ -1,0 +1,37 @@
+﻿<!--
+    С помощью оператора delete можно удалять элементы массивов по указанному индексу.
+-->
+
+<html>
+<head>
+    <title>Оператор delete в масивах</title>
+
+    <script type="text/javascript">
+
+        var products = ["Nokia", "HTC", "iPhone", "Samsung"];
+
+        console.log(products);
+        console.log("length of the array before delete: " + products.length);
+
+        var index1 = prompt("Выберите индекс 1 элемента для удаления: " + products);
+        //var index2 = prompt("Выберите индекс 2 элемента для удаления: " + products);
+
+        // Удаление элемента масива по указанному индексу.
+        delete products[index1];
+        
+        console.log(products);
+        console.log("length of the array after delete: " + products.length);
+
+        console.log(products[index1]);
+
+        //console.log(products[index2]);
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

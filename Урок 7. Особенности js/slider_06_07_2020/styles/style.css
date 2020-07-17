@@ -1,0 +1,25 @@
+.wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.awesome-slider{
+   width: 500px;
+   height: 300px;
+}
+
+.awesome-slider img {
+    width: 100%;
+}
+
+.slick-arrow {
+    background-color: green;
+}
+
+.slick-dots {
+    background: green;
+}
+
+.slick-dots li {
+    background: #fff;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Css Generator</title>
+	<style>
+		#block{
+			width: 200px;
+			height: 200px;
+			border: red;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-block">
+		<p>
+			Right top corner
+			<input type="range" id="rtr" min="0" max="100" value="0" oninput="getValue()">
+			<span id="ttr">0</span>
+		</p>
+		<p>
+			Left top corner
+			<input type="range" id="rtl" min="0" max="100" value="0" oninput="getValue()">
+			<span id="ttl">0</span>
+		</p>
+		<p>
+			Right bottom corner
+			<input type="range" id="rbr" min="0" max="100" value="0" oninput="getValue()">
+			<span id="tbr">0</span>
+		</p>
+		<p>
+			Left bottom corner
+			<input type="range" id="rbl" min="0" max="100" value="0" oninput="getValue()">
+			<span id="tbl">0</span>
+		</p>						
+	</div>
+	<div id="block"></div>
+
+	<script>
+		function getValue() {
+			// getting value of the corner
+			var rtr = document.getElementById("rtr").value;
+			var rtl = document.getElementById("rtl").value;
+			var rbr = document.getElementById("rbr").value;
+			var rbl = document.getElementById("rbl").value;
+			
+			// getting the text fields
+			var ttr = document.getElementById("ttr");
+			var ttl = document.getElementById("ttl");
+			var tbr = document.getElementById("tbr");
+			var tbl = document.getElementById("tbl");			
+
+			// getting our block
+			var block = document.getElementById('block');
+
+			//setting values from range to fields
+			ttr.innerHTML = rtr;
+			ttl.innerHTML = rtl;
+			tbr.innerHTML = rbr;
+			tbl.innerHTML = rbl;
+
+			block.style.borderRadius = rtl + "px " + rtr + "px " + rbl + "px " + rbr + "px ";
+		}
+	</script>
+	
+</body>
+</html>

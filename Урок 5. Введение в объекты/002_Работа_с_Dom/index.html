@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>groccery list</h1>
+    <ul id="list">
+
+
+    </ul>
+
+    <button onclick="addItem()">add to list</button>
+    <button onclick="addStyles()">add styles</button>
+    <script>
+        // написать функцию которая будет добавлять покупки в наш список. Название товара вводит пользователь
+        
+        function addItem() {
+            //alert('item should be added soon :)');
+            // create li
+            var item = prompt('please enter item name');
+            var newLi = document.createElement('li');
+            newLi.innerHTML = item;
+            document.getElementById('list').appendChild(newLi);
+        }
+
+        function addStyles() {
+            document.getElementById('list').style.border = '1px solid green';
+            document.getElementById('list').style.listStyleType = 'none';
+        }
+    </script>
+</body>
+</html>

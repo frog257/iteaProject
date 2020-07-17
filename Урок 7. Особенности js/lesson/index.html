@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick-theme.css"/>   
+    <title>Parallax</title>
+    <style>
+        .wrapper{
+            width: 600px;
+            margin: 0 auto;
+        }
+        #parallaxHere{
+            height: 300px;
+            width: 100%;
+        }
+        .slick-arrow{
+            background: green!important;
+        }
+        .slick-dots li{
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Examples of parallax and slider using jQuery</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!</p>
+        <div id="parallaxHere"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum iure provident ex amet voluptatum architecto maiores minima. Modi exercitationem ipsa dicta autem facilis illo quos animi totam maxime incidunt!</p>
+        <div class="slider">
+                <div>
+                    <img src="test1.jpg" alt="">
+                </div>
+                <div>
+                    <img src="test2.jpg" alt="">
+                </div>
+                <div>
+                    <img src="test3.jpg" alt="">
+                </div>
+              </div>
+        </div>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="parallax.min.js"></script>
+  <script type="text/javascript" src="slick.min.js"></script>
+  <script>
+      $(document).ready(function(){
+        // parallax
+        $('#parallaxHere').parallax({imageSrc: 'test.jpg'});
+
+        // slick slider
+        $('.slider').slick({
+            arrows: true,
+            dots: true,
+            initialSlide: 1,
+            speed: 4000
+        });
+      });
+  </script>
+</body>
+</html>
